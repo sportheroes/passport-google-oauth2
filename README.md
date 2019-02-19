@@ -1,5 +1,7 @@
 # passport-google-oauth20
 
+TEMPORARY FOR until https://github.com/jaredhanson/passport-google-oauth2/pull/51 gets merged & released
+
 [Passport](http://passportjs.org/) strategy for authenticating with [Google](http://www.google.com/)
 using the OAuth 2.0 API.
 
@@ -77,7 +79,7 @@ application:
 app.get('/auth/google',
   passport.authenticate('google', { scope: ['profile'] }));
 
-app.get('/auth/google/callback', 
+app.get('/auth/google/callback',
   passport.authenticate('google', { failureRedirect: '/login' }),
   function(req, res) {
     // Successful authentication, redirect home.
